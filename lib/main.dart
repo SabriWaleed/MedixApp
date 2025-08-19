@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medix_app/views/boarding1.dart';
 import 'dart:async';
 import 'package:medix_app/views/home_view.dart';
 
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeView()),
+        MaterialPageRoute(builder: (context) => const OnboardingScreen()),
       );
     });
   }

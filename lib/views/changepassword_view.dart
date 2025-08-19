@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medix_app/views/forgetpassword_view.dart';
 import 'package:medix_app/views/signup_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
@@ -71,7 +70,7 @@ class ChangePasswordView extends StatelessWidget {
 
             SizedBox(height: 30),
             FilledbuttonWidget(
-              text: "Log In",
+              text: "Change Password",
               onpressed: () {
                 Navigator.push(
                   context,
