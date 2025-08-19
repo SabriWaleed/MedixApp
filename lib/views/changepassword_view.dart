@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:medix_app/views/forgetpassword_view.dart';
 import 'package:medix_app/views/signup_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class ChangePasswordView extends StatelessWidget {
+  const ChangePasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +31,14 @@ class LoginView extends StatelessWidget {
           children: [
             Center(
               child: Text(
-                "Log In",
+                "Change Password",
                 style: TextStyle(color: Color(0xff1E1E1E), fontSize: 30),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(18),
               child: Text(
-                "Welcome Back to Medix ! come on now to continue your adventure to find the perfect property",
+                "Reset your account password and access your personal account again.",
                 maxLines: 3,
                 style: TextStyle(color: Color(0xffACACAC), fontSize: 19),
               ),
@@ -48,16 +47,19 @@ class LoginView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 16, bottom: 12),
               child: Text(
-                "Email",
+                "New Password",
                 style: TextStyle(color: Color(0xff1E1E1E), fontSize: 22),
               ),
             ),
-            TextfieldWidget(text: "Email"),
+            TextfieldWidget(
+              text: "Password",
+              image: "lib/assets/images/solar_eye-linear.png",
+            ),
             SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 16, bottom: 12),
               child: Text(
-                "Password",
+                "Confirm New Password",
                 style: TextStyle(color: Color(0xff1E1E1E), fontSize: 22),
               ),
             ),
@@ -66,33 +68,16 @@ class LoginView extends StatelessWidget {
               image: "lib/assets/images/solar_eye-linear.png",
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ForgetpasswordView(),
-                    ),
-                  );
-                },
-                child: Text(
-                  "Forget Password ",
-                  style: TextStyle(
-                    color: Color(0xffACACAC),
-                    fontSize: 22,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Color(0xffACACAC),
-                  ),
-                ),
-              ),
-            ),
             SizedBox(height: 30),
-            FilledbuttonWidget(text: "Log In",onpressed: (){ Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SignupView()),////////////////////////////////////////مؤقت
-              );},),
+            FilledbuttonWidget(
+              text: "Change Password",
+              onpressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignupView()), ////////////////////////////////مؤقت
+                );
+              },
+            ),
           ],
         ),
       ),
