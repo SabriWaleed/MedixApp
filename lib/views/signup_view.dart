@@ -48,7 +48,10 @@ class SignupView extends StatelessWidget {
           TextfieldWidget(text: "Password",image: "lib/assets/images/solar_eye-linear.png",),
           TextfieldWidget(text: "Confirm Password"),
           SizedBox(height: 16),
-          FilledbuttonWidget(text: "Create account"),
+          FilledbuttonWidget(text: "Create account",onpressed: (){ Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SignupView()),///////////////////////////////////////////مؤقت
+              );},),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

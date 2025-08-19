@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medix_app/views/login_view.dart';
 import 'package:medix_app/views/signup_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/outlinedbutton_widget.dart';
@@ -51,7 +52,8 @@ class HomeView extends StatelessWidget {
           OutlinedbuttonWidget(
             text: "Sign Up with Google",
             icon: "lib/assets/images/devicon_google.png",
-              onpressed: () {//مؤقت
+            onpressed: () {
+              //مؤقت
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SignupView()),
@@ -61,7 +63,8 @@ class HomeView extends StatelessWidget {
           OutlinedbuttonWidget(
             text: "Sign Up with Facebook",
             icon: "lib/assets/images/logos_facebook.png",
-              onpressed: () {//مؤقت
+            onpressed: () {
+              //مؤقت
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SignupView()),
@@ -86,7 +89,15 @@ class HomeView extends StatelessWidget {
             ],
           ),
           SizedBox(height: 60),
-          FilledbuttonWidget(text: "Login to my Account"),
+          FilledbuttonWidget(
+            text: "Login to my Account",
+            onpressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginView()),
+              );
+            },
+          ),
         ],
       ),
     );

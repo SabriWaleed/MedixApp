@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:medix_app/views/home_view.dart';
-import 'package:medix_app/views/signup_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomeView()),
@@ -45,8 +43,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Image.asset(
           "lib/assets/images/thumbnail.png",
-          width: 300,
-          height: 300,
+          width: 280,
+          height: 280,
         ),
       ),
     );
