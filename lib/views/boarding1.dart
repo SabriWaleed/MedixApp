@@ -33,7 +33,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           "Monitor medicine stock, request missing items, and keep your hospital always ready.",
     },
   ];
-
   void _nextPage() {
     if (_currentPage < onboardingData.length - 1) {
       _pageController.nextPage(
@@ -47,7 +46,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       );
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/views/changepassword_view.dart';
-import 'package:medix_app/views/signup_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/otp_widget.dart';
-import 'package:medix_app/widgets/textfield_widget.dart';
 
 class VerificationcodeView extends StatelessWidget {
   const VerificationcodeView({super.key});
@@ -46,14 +44,14 @@ class VerificationcodeView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-           OtpPageWidget(),
+            OtpPageWidget(),
             SizedBox(height: 16),
             FilledbuttonWidget(
               text: "Change Passowrd",
               onpressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ChangePasswordView()), 
+                  MaterialPageRoute(builder: (context) => ChangePasswordView()),
                 );
               },
             ),
