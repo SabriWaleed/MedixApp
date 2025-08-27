@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medix_app/views/doctors_view.dart';
 import 'package:medix_app/views/forgetpassword_view.dart';
-import 'package:medix_app/views/signup_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
 
@@ -89,10 +89,17 @@ class LoginView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            FilledbuttonWidget(text: "Log In",onpressed: (){ Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SignupView()),////////////////////////////////////////مؤقت
-              );},),
+            FilledbuttonWidget(
+              text: "Log In",
+              onpressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DoctorsView(),
+                  ), ////////////////////////////////////////مؤقت
+                );
+              },
+            ),
           ],
         ),
       ),
