@@ -24,7 +24,7 @@ class OtpPageWidget extends StatelessWidget {
           selectedColor: Color(0xff2D9CDB),
         ),
         onChanged: (value) {
-          print(value);//////////////////////////////////////مؤقت
+         // print(value);//////////////////////////////////////مؤقت
         },
       ),
     );

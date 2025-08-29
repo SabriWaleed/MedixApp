@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/views/boarding1.dart';
 import 'dart:async';
-import 'package:medix_app/views/home_view.dart';
-
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,13 +14,11 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
-
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
@@ -36,7 +30,6 @@ class _SplashScreenState extends State<SplashScreen> {
       );
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
