@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/widgets/containerofbodydoctorandnurse_widget.dart';
 import 'package:medix_app/widgets/optionbody_widget.dart';
+import 'package:medix_app/widgets/rowsearchandicon_widget.dart';
 import 'package:medix_app/widgets/search_widget.dart';
 
 class BodydoctorWidget extends StatefulWidget {
@@ -54,26 +55,7 @@ class _BodydoctorWidgetState extends State<BodydoctorWidget> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(
-          child: Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 24),
-                  child: SearchWidget(),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 24, left: 5),
-                child: Image.asset(
-                  "lib/assets/images/filter-tick.png",
-                  width: 30,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
-          ),
-        ),
+        SliverToBoxAdapter(child: RowsearchandiconWidget()),
         SliverToBoxAdapter(
           child: SizedBox(
             height: 60,
