@@ -3,7 +3,6 @@ import 'package:medix_app/views/doctors_view.dart';
 import 'package:medix_app/views/forgetpassword_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
-
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
   @override
