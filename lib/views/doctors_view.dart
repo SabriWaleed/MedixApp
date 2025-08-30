@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/widgets/bodydoctor_widget.dart';
-import 'package:medix_app/widgets/bottomnavigationbar_widget.dart';
 
 class DoctorsView extends StatelessWidget {
   const DoctorsView({super.key});
@@ -53,7 +52,6 @@ class DoctorsView extends StatelessWidget {
         ],
       ),
       body: BodydoctorWidget(),
-      bottomNavigationBar: BottomnavigationbarWidget()
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/views/servicesdetails_view.dart';
-import 'package:medix_app/widgets/bottomnavigationbar_widget.dart';
 import 'package:medix_app/widgets/rowsearchandicon_widget.dart';
 
 class ServicesView extends StatelessWidget {
@@ -93,7 +92,6 @@ class ServicesView extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomnavigationbarWidget(),
     );
   }
 }

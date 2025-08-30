@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/views/doctors_view.dart';
 import 'package:medix_app/views/forgetpassword_view.dart';
+import 'package:medix_app/views/main_screen.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
 
@@ -94,7 +95,7 @@ class LoginView extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DoctorsView(),
+                    builder: (context) => MainScreen(),
                   ), ////////////////////////////////////////مؤقت
                 );
               },
