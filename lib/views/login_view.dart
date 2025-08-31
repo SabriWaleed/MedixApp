@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:medix_app/views/doctors_view.dart';
 import 'package:medix_app/views/forgetpassword_view.dart';
 import 'package:medix_app/views/main_screen.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
+import 'package:medix_app/widgets/iconbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
+
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
   @override
@@ -12,18 +13,7 @@ class LoginView extends StatelessWidget {
       backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Image.asset(
-            "lib/assets/images/Vector (6).png",
-            color: Colors.blue,
-            width: 20,
-            height: 20,
-            fit: BoxFit.contain,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: IconbuttonWidget(),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -93,9 +83,7 @@ class LoginView extends StatelessWidget {
               onpressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => MainScreen(),
-                  ), ////////////////////////////////////////مؤقت
+                  MaterialPageRoute(builder: (context) => MainScreen()),
                 );
               },
             ),

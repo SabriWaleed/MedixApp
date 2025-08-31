@@ -4,9 +4,8 @@ import 'package:medix_app/views/signup_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/outlinedbutton_widget.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
-
+class AuthView extends StatelessWidget {
+  const AuthView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +52,6 @@ class HomeView extends StatelessWidget {
             text: "Sign Up with Google",
             icon: "lib/assets/images/devicon_google.png",
             onpressed: () {
-              //مؤقت
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SignupView()),
@@ -64,7 +62,6 @@ class HomeView extends StatelessWidget {
             text: "Sign Up with Facebook",
             icon: "lib/assets/images/logos_facebook.png",
             onpressed: () {
-              //مؤقت
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => SignupView()),

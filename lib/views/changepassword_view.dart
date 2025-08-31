@@ -1,29 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:medix_app/views/signup_view.dart';
+import 'package:medix_app/views/login_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
+import 'package:medix_app/widgets/iconbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
 
 class ChangePasswordView extends StatelessWidget {
   const ChangePasswordView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Image.asset(
-            "lib/assets/images/Vector (6).png",
-            color: Colors.blue,
-            width: 20,
-            height: 20,
-            fit: BoxFit.contain,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: IconbuttonWidget()
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -67,14 +56,13 @@ class ChangePasswordView extends StatelessWidget {
               text: "Password",
               image: "lib/assets/images/solar_eye-linear.png",
             ),
-
             SizedBox(height: 30),
             FilledbuttonWidget(
               text: "Change Password",
               onpressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignupView()), ////////////////////////////////مؤقت
+                  MaterialPageRoute(builder: (context) => LoginView()),
                 );
               },
             ),

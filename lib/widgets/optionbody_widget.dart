@@ -12,7 +12,6 @@ class OptionbodyWidget extends StatelessWidget {
   final bool isSelected;
   final bool isFirst;
   final bool isLast;
-
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -3,7 +3,6 @@ import 'package:medix_app/widgets/search_widget.dart';
 
 class RowsearchandiconWidget extends StatelessWidget {
   const RowsearchandiconWidget({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Row(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:medix_app/models/doctors_model.dart';
 
 class ContainerofbodydoctorandnurseWidget extends StatelessWidget {
-  const ContainerofbodydoctorandnurseWidget({super.key});
+  const ContainerofbodydoctorandnurseWidget({super.key, required this.model});
+  final DnModel model;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,8 +24,8 @@ class ContainerofbodydoctorandnurseWidget extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Image.asset(
-                      "lib/assets/images/doc1.webp",
+                    child: Image.network(
+                      model.image!,
                       width: 80,
                       height: 90,
                       fit: BoxFit.cover,
@@ -37,11 +39,15 @@ class ContainerofbodydoctorandnurseWidget extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              "Dr. John Walker",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                            Expanded(
+                              child: Text(
+                                model.name,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                             Text(
@@ -54,7 +60,7 @@ class ContainerofbodydoctorandnurseWidget extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          "Neurosurgeon",
+                          model.specialization,
                           style: TextStyle(color: Colors.grey),
                         ),
                         Row(
@@ -65,12 +71,18 @@ class ContainerofbodydoctorandnurseWidget extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                             SizedBox(width: 4),
-                            Text("Presby Hospital"),
+                            Expanded(
+                              child: Text(
+                                model.hospital,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
                           ],
                         ),
                         Row(
                           children: List.generate(
-                            5,
+                            model.rating,
                             (index) => Icon(
                               Icons.star,
                               color: Colors.orange,

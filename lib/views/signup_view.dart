@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/views/login_view.dart';
-import 'package:medix_app/views/nurse_view.dart';
+import 'package:medix_app/views/main_screen.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
 
 class SignupView extends StatelessWidget {
   const SignupView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +50,7 @@ class SignupView extends StatelessWidget {
           SizedBox(height: 16),
           FilledbuttonWidget(text: "Create account",onpressed: (){ Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => NurseView()),///////////////////////////////////////////مؤقت
+                MaterialPageRoute(builder: (context) => MainScreen()),
               );},),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
