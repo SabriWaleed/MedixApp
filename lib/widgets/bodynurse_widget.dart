@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medix_app/models/doctors_model.dart';
 import 'package:medix_app/widgets/containerofbodydoctorandnurse_widget.dart';
 import 'package:medix_app/widgets/rowsearchandicon_widget.dart';
 
@@ -13,8 +14,8 @@ class BodyNurseWidget extends StatelessWidget {
         ),
         SliverList(
           delegate: SliverChildBuilderDelegate(
-            (context, index) => ContainerofbodydoctorandnurseWidget(),
-            childCount: 20,
+            (context, index) => ContainerofbodydoctorandnurseWidget(model: fakedatanurse[index],),
+            childCount: fakedatanurse.length,
           ),
         ),
       ],

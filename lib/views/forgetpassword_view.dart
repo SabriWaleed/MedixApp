@@ -1,29 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:medix_app/views/verificationcode_view.dart';
 import 'package:medix_app/widgets/filledbutton_widget.dart';
+import 'package:medix_app/widgets/iconbutton_widget.dart';
 import 'package:medix_app/widgets/textfield_widget.dart';
 
 class ForgetpasswordView extends StatelessWidget {
   const ForgetpasswordView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: Image.asset(
-            "lib/assets/images/Vector (6).png",
-            color: Colors.blue,
-            width: 20,
-            height: 20,
-            fit: BoxFit.contain,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        leading: IconbuttonWidget()
       ),
       body: SingleChildScrollView(
         child: Column(

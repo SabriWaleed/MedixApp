@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:medix_app/views/doctors_view.dart';
 import 'package:medix_app/views/medicine_screen.dart';
 import 'package:medix_app/views/nurse_view.dart';
-import 'package:medix_app/widgets/cusstom_appbar.dart';
+import 'package:medix_app/widgets/appbar_widget.dart';
 import 'package:medix_app/widgets/rowsearchandicon_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
   void _navigateTo(BuildContext context, Widget screen) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
   }
@@ -21,19 +20,14 @@ class HomeView extends StatelessWidget {
     return GestureDetector(
       onTap: () => _navigateTo(context, screen),
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-        width: 200,
-        height: 100,
+        margin: const EdgeInsets.symmetric(horizontal: 8),
+        width: 170,
+        height: 170,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue[100]!, Colors.blue[50]!],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          border: Border.all(color: Colors.blue[200]!, width: 1.5),
+          border: Border.all(color: Color(0xff2D9CDB), width: 1.5),
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
@@ -42,7 +36,7 @@ class HomeView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 child: Image.asset(
                   imagePath,
-                  width: 80,
+                  width: 90,
                   height: 80,
                   fit: BoxFit.cover,
                 ),
@@ -52,7 +46,7 @@ class HomeView extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                color: Colors.blue[900],
+                color: Color(0xff2D9CDB),
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -71,31 +65,24 @@ class HomeView extends StatelessWidget {
         padding: const EdgeInsets.all(30),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          gradient: LinearGradient(
-            colors: [Colors.grey[200]!, Colors.grey[100]!],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
-              spreadRadius: 1,
-              blurRadius: 3,
-              offset: const Offset(0, 2),
-            ),
-          ],
+          border: Border.all(color: Color(0xffE0E0E0)),
         ),
         child: Row(
           children: [
-            Icon(Icons.lightbulb_outline, color: Colors.grey[600], size: 16),
-            const SizedBox(width: 8),
+            Image.asset(
+              "lib/assets/images/lamp-on.png",
+              width: 30,
+              height: 30,
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(width: 16),
             Expanded(
               child: Text(
                 tip,
                 style: TextStyle(
-                  color: Colors.grey[800],
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
+                  color: Color(0xff000000),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),
@@ -108,7 +95,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CusstomAppbar(),
+      appBar: AppbarWidget(),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
@@ -117,12 +104,10 @@ class HomeView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 12),
-              // Search bar
               const RowsearchandiconWidget(),
               const SizedBox(height: 12),
-              // Horizontal scrollable cards
               SizedBox(
-                height: 130, // Adjusted height to fit the larger container
+                height: 130,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -150,7 +135,6 @@ class HomeView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              // Vertical scrollable tips
               Expanded(
                 child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,

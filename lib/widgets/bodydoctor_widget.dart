@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:medix_app/models/doctors_model.dart';
 import 'package:medix_app/widgets/containerofbodydoctorandnurse_widget.dart';
 import 'package:medix_app/widgets/optionbody_widget.dart';
 import 'package:medix_app/widgets/rowsearchandicon_widget.dart';
-import 'package:medix_app/widgets/search_widget.dart';
 
 class BodydoctorWidget extends StatefulWidget {
   const BodydoctorWidget({super.key});
   @override
   State<BodydoctorWidget> createState() => _BodydoctorWidgetState();
 }
-
 class _BodydoctorWidgetState extends State<BodydoctorWidget> {
-  int selectedIndex = -1;
+  int selectedIndex = 0;
   static const List<String> doctorSpecialties = [
     "All",
     "Internal Medicine",
@@ -51,7 +50,6 @@ class _BodydoctorWidgetState extends State<BodydoctorWidget> {
     "Occupational Medicine",
   ];
   @override
-  @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
@@ -83,8 +81,8 @@ class _BodydoctorWidgetState extends State<BodydoctorWidget> {
         SliverToBoxAdapter(child: SizedBox(height: 8)),
         SliverList(
           delegate: SliverChildBuilderDelegate(
-            (context, index) => ContainerofbodydoctorandnurseWidget(),
-            childCount: 20,
+            (context, index) => ContainerofbodydoctorandnurseWidget(model: fakedatadoctor[index],),
+            childCount: fakedatadoctor.length,
           ),
         ),
       ],

@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:medix_app/views/home_view.dart';
+import 'package:medix_app/views/auth_view.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
-
+class OnboardingScreenView extends StatefulWidget {
+  const OnboardingScreenView({super.key});
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<OnboardingScreenView> createState() => _OnboardingScreenViewState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingScreenViewState extends State<OnboardingScreenView> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
-
-  // صفحات الـ Onboarding
   final List<Map<String, String>> onboardingData = [
     {
       "image": "lib/assets/images/rafiki.png",
@@ -42,10 +39,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeView()),
+        MaterialPageRoute(builder: (context) => const AuthView()),
       );
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +103,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             horizontal: 4,
                             vertical: 20,
                           ),
-                          width: _currentPage == index ? 12 : 8,
+                          width: _currentPage == index ? 8 : 8,
                           height: 8,
                           decoration: BoxDecoration(
                             color: _currentPage == index
@@ -123,7 +121,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ],
       ),
-
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(16),
         child: FloatingActionButton(

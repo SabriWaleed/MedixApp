@@ -4,7 +4,6 @@ import 'package:medix_app/widgets/rowsearchandicon_widget.dart';
 
 class ServicesView extends StatelessWidget {
   const ServicesView({super.key});
-
   void _openService(BuildContext context, String serviceName) {
     Navigator.push(
       context,
@@ -26,9 +25,7 @@ class ServicesView extends StatelessWidget {
       "Medical articles": "lib/assets/images/ooui_articles-ltr.png",
       "Medical advice": "lib/assets/images/healthicons_medical-advice.png",
     };
-
     final serviceEntries = services.entries.toList();
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -59,14 +56,13 @@ class ServicesView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final serviceName = serviceEntries[index].key;
                   final serviceIcon = serviceEntries[index].value;
-
                   return GestureDetector(
                     onTap: () => _openService(context, serviceName),
                     child: Container(
                       width: 149,
                       height: 108,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xff2D9CDB),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Column(

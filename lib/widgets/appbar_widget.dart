@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 
-class CusstomAppbar extends StatefulWidget implements PreferredSizeWidget {
-  const CusstomAppbar({super.key});
-
-  @override
-  State<CusstomAppbar> createState() => _CusstomAppbarState();
+class AppbarWidget extends StatelessWidget implements PreferredSizeWidget {
+  const AppbarWidget({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-}
 
-class _CusstomAppbarState extends State<CusstomAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
-      titleSpacing: 8,
+      titleSpacing: 10,
       leading: Padding(
         padding: const EdgeInsets.only(left: 12),
         child: Image.asset(
@@ -26,7 +21,7 @@ class _CusstomAppbarState extends State<CusstomAppbar> {
       ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
             "Hello ,",
             style: TextStyle(
